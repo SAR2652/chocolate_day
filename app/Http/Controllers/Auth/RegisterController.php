@@ -77,14 +77,14 @@ class RegisterController extends Controller
     }
 
     /**
-     * Obtain the user information from GitHub.
+     * Obtain the user information from Google.
      *
-     * @return Response
+     * 
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('google')->user();
-        return $user->getEmail();
+        $user = Socialite::driver('google')->stateless()->user();
+        $email = $user->getEmail();
         // $user->token;
     } 
 }

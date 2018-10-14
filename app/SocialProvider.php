@@ -8,7 +8,7 @@ class SocialProvider extends Model
 {
     protected $fillable = ['provider_id', 'provider'];
 
-    function user()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

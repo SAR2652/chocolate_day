@@ -40,4 +40,10 @@ return [
         ],
     ],
 
+    'google' => [
+        'client_id' => '158970313300-kirfvh4urtrkjldupigonvbrujgkr3lv.apps.googleusercontent.com',
+        'client_secret' => 'qU45CT2XafY8g1LNEjcWawE0',
+        'redirect' => 'http://localhost:8000/auth/google/callback',
+    ],
+
 ];

@@ -86,6 +86,6 @@ class RegisterController extends Controller
         $user = Socialite::driver('google')->stateless()->user();
         $email = $user->getEmail();
         // $user->token;
-        return $email;
+        return view('pages.welcome')->with('user', $user);
     } 
 }

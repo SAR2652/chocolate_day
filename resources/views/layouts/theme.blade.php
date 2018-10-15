@@ -12,20 +12,20 @@
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
  		<!-- Bootstrap -->
- 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/>
 
  		<!-- Slick -->
- 		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
- 		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/css/slick.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/css/slick-theme.css"/>
 
  		<!-- nouislider -->
- 		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/css/nouislider.min.css"/>
 
  		<!-- Font Awesome Icon -->
- 		<link rel="stylesheet" href="css/font-awesome.min.css">
+ 		<link rel="stylesheet" href="/css/font-awesome.min.css">
 
  		<!-- Custom stlylesheet -->
- 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/css/style.css"/>
 
  		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
  		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +43,12 @@
 				<div class="container">
 					
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+						<li><a href="#"><i class="fa fa-user-o"></i>
+						<?php if(!empty($user))
+						{
+							echo $user->getEmail();
+						}
+						else { echo "My Account";}?></a></li>
 					</ul>
 				</div>
 			</div>
@@ -59,7 +64,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="#" class="logo">
-									<img src="./img/download.png" alt="">
+									<img src="/img/download.png" alt="">
 								</a>
 							</div>
 						</div>
@@ -244,7 +249,7 @@
 									<li><a href="#">About Us</a></li>
 									<li><a href="#">Contact Us</a></li>
 									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Orders and Returns</a></li>
+									<li><a href="#">Orders</a></li>
 									<li><a href="#">Terms & Conditions</a></li>
 								</ul>
 							</div>
@@ -257,7 +262,6 @@
 									<li><a href="#">My Account</a></li>
 									<li><a href="#">View Cart</a></li>
 									<li><a href="#">Wishlist</a></li>
-									<li><a href="#">Track My Order</a></li>
 									<li><a href="#">Help</a></li>
 								</ul>
 							</div>
@@ -278,7 +282,7 @@
 							
 							<span class="copyright">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made by students of D12B</a>
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website was made by students of D12B</a>
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</span>
 

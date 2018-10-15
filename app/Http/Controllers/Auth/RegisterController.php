@@ -75,16 +75,17 @@ class RegisterController extends Controller
     {
         return Socialite::driver('google')->redirect();
     }
-
     /**
      * Obtain the user information from Google.
      *
      * 
      */
+    
     public function handleProviderCallback()
     {
         $user = Socialite::driver('google')->stateless()->user();
         $email = $user->getEmail();
         // $user->token;
+        return $email;
     } 
 }

@@ -1,0 +1,48 @@
+.button{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#add_to_cart{
+    background:orange;
+    color: white;
+}
+
+#buy_now{
+    background: red;
+    color: white;
+}
+
+.send_to{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    background: #E6E6FA;
+    color: black;
+}
+
+.message{
+    border: none;
+    padding: 10px 32px;
+    display: inline-block;
+    border-radius: 8px;
+    background: red;
+    color:yellow;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+#chocolate_pic{
+    width: 250px;
+    height: 400px;
+}

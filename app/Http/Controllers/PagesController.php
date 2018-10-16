@@ -10,4 +10,8 @@ class PagesController extends Controller
     {
         return view('pages.welcome');
     }
+
+    public function purchasing(){
+        return view('pages.purchasing');
+    }
 }

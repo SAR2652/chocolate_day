@@ -17,6 +17,7 @@
 */
 
 Route::get('/', 'PagesController@welcome');
+Route::get('/purchasing','PagesController@purchasing');
 
 Auth::routes();
 

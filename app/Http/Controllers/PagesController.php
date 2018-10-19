@@ -11,9 +11,9 @@ class PagesController extends Controller
         return view('pages.welcome');
     }
 
-    public function purchasing(){
+    /*public function purchasing(){
         return view('pages.purchasing');
-    }
+    }*/
     public function cart(){
         return view('pages.cart');
     }

@@ -17,7 +17,7 @@
 */
 
 Route::get('/', 'PagesController@welcome');
-Route::get('/purchasing','PagesController@purchasing');
+Route::get('/purchasing','ChocolateController@index');
 
 Auth::routes();
 
@@ -26,3 +26,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback');
 Route::get('cart','PagesController@cart');
+//Route::get('choc_view','ChocolateController@index');

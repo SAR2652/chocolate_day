@@ -2,13 +2,14 @@
 @section('content')
 <link href="css/purchasing_page.css" rel="stylesheet">
 <div>
-
     <div style="display:inline-block;vertical-align:top;">
-        <img id="chocolate_pic" src="img/silk_oreo.jpg">
-
+        @foreach ($chocos as $item)
+        <img id="chocolate_pic" src="{{asset('img/').'/'.$item->img_path}}">
+        @break
+        @endforeach
         <div>
                 <div style="display:inline-block;vertical-align:top;">
-                    <button  class="button" id="add_to_cart">Add to cart</button>
+                <button  class="button" id="add_to_cart"><a href="cart">Add to cart</a></button>
                 </div>
                 
                 <div style="display:inline-block;">

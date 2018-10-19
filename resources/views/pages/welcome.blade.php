@@ -62,24 +62,52 @@
 			</script>
 			<div class="container1" style="margin-left: 50px;">
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '1'])}}">><img src="img/kitkat.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Kitkat</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '1'])}}">><img src="img/silk_oreo.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Silk Oreo</center></label></div>
 			</div>
 			
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '2'])}}">><img src="img/crackle.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Dairy Milk Crackle</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '2'])}}">><img src="img/bournville.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Bournville</center></label></div>
 			</div>
 
 			<div class="choc">
-				<a href="#"><img src="img/bubbly.jpg" style="height: 250px; margin-top: 20px; margin-left: 45px;"></a>
+				<a href="{{route('purchasing', ['c_id' => '3'])}}"><img src="img/crackle.jpg" style="height: 250px; margin-top: 20px; margin-left: 45px;"></a>
 				<div class="label"  style="margin-top: 40px;"><label><center>Dairy Milk Bubbly</center></label></div>
 			</div>
 
 			<div class="choc">
-				<a href="#"><img src="img/5star.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>5 Star</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '4'])}}"><img src="img/kitkat.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Kitkat</center></label></div>
 			</div>
+
+			<div class="choc">
+				<a href="{{route('purchasing', ['c_id' => '5'])}}"><img src="img/dairy_milk.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Dairy Milk</center></label></div>
+			</div>
+
+			<div class="choc">
+				<a href="{{route('purchasing', ['c_id' => '6'])}}"><img src="img/shots.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Shots</center></label></div>
+			</div>
+
+			<div class="choc">
+				<a href="{{route('purchasing', ['c_id' => '7'])}}"><img src="img/fruit-and-nut.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Fruit And Nut</center></label></div>
+			</div>
+
+			<div class="choc">
+				<a href="{{route('purchasing', ['c_id' => '8'])}}"><img src="img/munch.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Munch</center></label></div>
+			</div>
+
+			<div class="choc">
+				<a href="{{route('purchasing', ['c_id' => '9'])}}"><img src="img/temptation.jpg" style="height: 250px;"></a>
+				<div class="label"><label><center>Temptation</center></label></div>
+			</div>
+
+
+
 			</div>
 
 @endsection

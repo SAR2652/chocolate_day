@@ -2,6 +2,7 @@
 @section('content')
 <link rel="stylesheet" href="{{URL::asset('css/purchasing_page.css')}}">
 <div>
+
     <div style="display:inline-block;vertical-align:top;">
         @foreach ($chocos as $item)
         @if ($c_id==$item->id)
@@ -15,7 +16,7 @@
         @endforeach
         <div>
                 <div style="display:inline-block;vertical-align:top;">
-                <button  class="button" id="add_to_cart"><a href="cart">Add to cart</a></button>
+                <button  class="button" id="add_to_cart"><a href="{{route('cart')}}">Add to cart</a></button>
                 </div>
                 
                 <div style="display:inline-block;">

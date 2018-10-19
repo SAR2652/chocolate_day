@@ -62,48 +62,48 @@
 			</script>
 			<div class="container1" style="margin-left: 50px;">
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '1'])}}">><img src="img/silk_oreo.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Silk Oreo</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '1'])}}"><img src="img/silk_oreo(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Silk Oreo<br>Love</center></div>
 			</div>
 			
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '2'])}}">><img src="img/bournville.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Bournville</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '2'])}}"><img src="img/bournville(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Bournville<br>Special Dedication</center></div>
 			</div>
 
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '3'])}}"><img src="img/crackle.jpg" style="height: 250px; margin-top: 20px; margin-left: 45px;"></a>
-				<div class="label"  style="margin-top: 40px;"><label><center>Dairy Milk Bubbly</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '3'])}}"><img src="img/crackle(1).jpg" style="height: 250px;"></a>
+				<div class="label"  style="margin-top: 40px;"><center>Dairy Milk Crackle<br>Best Friend</center></div>
 			</div>
 
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '4'])}}"><img src="img/kitkat.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Kitkat</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '4'])}}"><img src="img/kitkat(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Kitkat<br>Tharki</center></div>
 			</div>
 
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '5'])}}"><img src="img/dairy_milk.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Dairy Milk</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '5'])}}"><img src="img/dairy_milk(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Dairy Milk<br>Friendship</center></div>
 			</div>
 
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '6'])}}"><img src="img/shots.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Shots</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '6'])}}"><img src="img/shots(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Shots<br>Hate</center></div>
 			</div>
 
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '7'])}}"><img src="img/fruit-and-nut.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Fruit And Nut</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '7'])}}"><img src="img/fruit-and-nut(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Fruit And Nut<br>Crush</center></div>
 			</div>
 
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '8'])}}"><img src="img/munch.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Munch</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '8'])}}"><img src="img/munch(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Munch<br>Friendzone</center></div>
 			</div>
 
 			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '9'])}}"><img src="img/temptation.jpg" style="height: 250px;"></a>
-				<div class="label"><label><center>Temptation</center></label></div>
+				<a href="{{route('purchasing', ['c_id' => '9'])}}"><img src="img/temptation(1).jpg" style="height: 250px;"></a>
+				<div class="label"><center>Temptation<br>Best BE</center></div>
 			</div>
 
 

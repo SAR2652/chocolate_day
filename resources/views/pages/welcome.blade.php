@@ -62,12 +62,12 @@
 			</script>
 			<div class="container1" style="margin-left: 50px;">
 			<div class="choc">
-				<a href="purchasing"><img src="img/kitkat.jpg" style="height: 250px;"></a>
+				<a href="{{route('purchasing', ['c_id' => '1'])}}">><img src="img/kitkat.jpg" style="height: 250px;"></a>
 				<div class="label"><label><center>Kitkat</center></label></div>
 			</div>
 			
 			<div class="choc">
-				<a href="#"><img src="img/crackle.jpg" style="height: 250px;"></a>
+				<a href="{{route('purchasing', ['c_id' => '2'])}}">><img src="img/crackle.jpg" style="height: 250px;"></a>
 				<div class="label"><label><center>Dairy Milk Crackle</center></label></div>
 			</div>
 

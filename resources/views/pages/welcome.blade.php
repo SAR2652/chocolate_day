@@ -61,49 +61,63 @@
 				}
 			</script>
 			<div class="container1" style="margin-left: 50px;">
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '1'])}}"><img src="img/silk_oreo(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Silk Oreo<br>Love</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '1'])}}">
+				<img src="img/silk_oreo(1).jpg" style="height: 250px;">
+				<div class="label">
+					<center>Silk Oreo<br>
+							Love</center></div>
+					</a>
 			</div>
 			
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '2'])}}"><img src="img/bournville(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Bournville<br>Special Dedication</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '2'])}}">
+				<img src="img/bournville(1).jpg" style="height: 250px;">
+				<div class="label">
+					<center>Bournville<br>Special Dedication</center></div></a>
 			</div>
 
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '3'])}}"><img src="img/crackle(1).jpg" style="height: 250px;"></a>
-				<div class="label"  style="margin-top: 40px;"><center>Dairy Milk Crackle<br>Best Friend</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '3'])}}">
+				<img src="img/crackle(1).jpg" style="height: 250px;">
+				<div class="label"  style="margin-top: 40px;">
+					<center>Dairy Milk Crackle<br>Best Friend</center></div></a>
 			</div>
 
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '4'])}}"><img src="img/kitkat(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Kitkat<br>Tharki</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '4'])}}">
+				<img src="img/kitkat(1).jpg" style="height: 250px;">
+				<div class="label">
+					<center>Kitkat<br>Tharki</center></div></a>
 			</div>
 
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '5'])}}"><img src="img/dairy_milk(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Dairy Milk<br>Friendship</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '5'])}}">
+				<img src="img/dairy_milk(1).jpg" style="height: 250px;">
+				<div class="label">
+					<center>Dairy Milk<br>Friendship</center></div></a>
 			</div>
 
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '6'])}}"><img src="img/shots(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Shots<br>Hate</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '6'])}}">
+				<img src="img/shots(1).jpg" style="height: 250px;">
+				<div class="label">
+					<center>Shots<br>Hate</center></div></a>
 			</div>
 
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '7'])}}"><img src="img/fruit-and-nut(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Fruit And Nut<br>Crush</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '7'])}}">
+				<img src="img/fruit-and-nut(1).jpg" style="height: 250px;">
+				<div class="label">
+					<center>Fruit And Nut<br>
+						Crush</center></div></a>
 			</div>
 
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '8'])}}"><img src="img/munch(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Munch<br>Friendzone</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '8'])}}">
+				<img src="img/munch(1).jpg" style="height: 250px;"></a>
+				<div class="label">
+					<center>Munch<br>
+						Friendzone</center></div></a>
 			</div>
 
-			<div class="choc">
-				<a href="{{route('purchasing', ['c_id' => '9'])}}"><img src="img/temptation(1).jpg" style="height: 250px;"></a>
-				<div class="label"><center>Temptation<br>Best BE</center></div>
+			<div class="choc"><a href="{{route('purchasing', ['c_id' => '9'])}}">
+				<img src="img/temptation(1).jpg" style="height: 250px;">
+				<div class="label">
+					<center>Temptation<br>
+						Best BE</center></div></a>
 			</div>
 
 

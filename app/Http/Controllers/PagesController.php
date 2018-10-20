@@ -21,8 +21,14 @@ class PagesController extends Controller
     /*public function purchasing(){
         return view('pages.purchasing');
     }*/
+<<<<<<< HEAD
     public function cart()
     {
         return view('pages.cart');
+=======
+    public function cart($c_id){
+        
+        return view('pages.cart')->with('c_id',$c_id);
+>>>>>>> 375f9d444211a5cbb6470a3931a40820207cc99d
     }
 }

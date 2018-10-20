@@ -2,7 +2,7 @@
 @section('content')
 <link rel="stylesheet" href="{{URL::asset('css/purchasing_page.css')}}">
 <div>
-
+<form action="{{asset('getmessage.php')}}" method="POST">
     <div style="display:inline-block;vertical-align:top;">
         @foreach ($chocos as $item)
         @if ($c_id==$item->id)
@@ -16,7 +16,7 @@
         @endforeach
         <div>
                 <div style="display:inline-block;vertical-align:top;">
-                <button  class="button" id="add_to_cart"><a href="{{route('cart',$c_id)}}">Add to cart</a></button>
+                <button  class="button" id="add_to_cart">Add to cart</button>
                 </div>
                 
                 <div style="display:inline-block;">
@@ -46,12 +46,12 @@
 
 
         <div style="float:left; margin-top:20px; padding:15px">
-            <input type="email" class="send_to" placeholder="Send to">
+            <input type="email" name="email"class="send_to" placeholder="Send to">
         </div>
 
         <!--<input type="text" class="message" placeholder="Message">-->
         <div style="float:right;">
-            <textarea class="message" rows="4" cols="50" placeholder="Message"></textarea>
+            <textarea class="message"  name="message" rows="4" cols="50" placeholder="Message"></textarea>
         </div>
 
     </div>

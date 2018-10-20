@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Socialite;
+use App\SocialProvider;
 
 class RegisterController extends Controller
 {
@@ -83,9 +85,37 @@ class RegisterController extends Controller
     
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('google')->stateless()->user();
-        $email = $user->getEmail();
+        try
+        {
+            $socialUser = Socialite::driver('google')->stateless()->user();
+        }
+        catch(\Exception $e)
+        {
+            return redirect('/');
+        }
+
+        $socialProvider = SocialProvider::where('provider_id', $socialUser->getId())->first();
+        if(!$socialProvider)
+        {
+            //create new user and provider;
+            $user = User::firstOrCreate(
+                ['email' => $socialUser->getEmail()],
+                ['name' => $socialUser->getName()]
+            );
+
+            $user->socialProviders()->create(
+                ['providerId' => $socialUser->getId(), 'provider' => 'google']
+            );
+        }
+        else
+        {
+            $user = $socialProvider->user;
+        }
+        auth()->login($user);
+        $email = $socialUser->getEmail();
+        session(['email' => $email]);
+        header("Cache-Control", "no-cache, no-store, must-revalidate");
         // $user->token;
-        return view('pages.welcome')->with('user', $user);
+        return redirect('/');
     } 
 }

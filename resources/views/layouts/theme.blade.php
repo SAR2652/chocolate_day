@@ -44,11 +44,11 @@
 					
 					<ul class="header-links pull-right">
 						<li><a href="/auth/google"><i class="fa fa-user-o"></i>
-						<?php if(!empty($user))
+						<?php if(!empty($email))
 						{
-							echo $user->getEmail();
+							echo session('email');
 						}
-						else { echo "My Account";}?></a></li>
+						//else { echo "My Account";}?></a></li>
 					</ul>
 				</div>
 			</div>

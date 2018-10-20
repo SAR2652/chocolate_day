@@ -8,7 +8,11 @@ class PagesController extends Controller
 {
     public function welcome()
     {
-        return view('pages.welcome');
+        if(session('email')->exists())
+        {
+            $email = session('email');
+        }
+        return view('pages.welcome')->with('email');
     }
 
     /*public function purchasing(){

@@ -20,7 +20,7 @@
                 </div>
                 
                 <div style="display:inline-block;">
-                    <button class="button" id="buy_now">Buy now</button>
+                <button class="button" id="buy_now"><a href="{{route('thank_you')}}">Buy now</button>
                 </div>
         </div>
     </div>

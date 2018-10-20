@@ -23,7 +23,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback');
-//Route::get('/cart','PagesController@cart');
 Route::get('/cart/{c_id}', [
     'as' => 'cart', 'uses' => 'PagesController@cart'
+]);
+
+Route::get('sendbasicemail','MailController@basic_email');
+Route::get('sendhtmlemail','MailController@html_email');
+Route::get('sendattachmentemail','MailController@attachment_email');
+
+Route::get('/thank_you', [
+    'as' => 'thank_you', 'uses' => 'PagesController@thank_you'
+]);
+
+Route::get('/welcome', [
+    'as' => 'welcome', 'uses' => 'PagesController@welcome'
 ]);

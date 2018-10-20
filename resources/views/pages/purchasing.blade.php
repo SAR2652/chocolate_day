@@ -1,15 +1,22 @@
 @extends('layouts.theme')
 @section('content')
-<link href="css/purchasing_page.css" rel="stylesheet">
+<link rel="stylesheet" href="{{URL::asset('css/purchasing_page.css')}}">
 <div>
+
     <div style="display:inline-block;vertical-align:top;">
         @foreach ($chocos as $item)
-        <img id="chocolate_pic" src="{{asset('img/').'/'.$item->img_path}}">
-        @break
+        @if ($c_id==$item->id)
+        <img id="chocolate_pic" src="{{asset('img/').'/'.$item->img_path}}"/>
+        @php
+            $price =$item->price;
+            $name =$item->choco_name;
+            $category = $item->category;
+        @endphp
+        @endif
         @endforeach
         <div>
                 <div style="display:inline-block;vertical-align:top;">
-                <button  class="button" id="add_to_cart"><a href="cart">Add to cart</a></button>
+                <button  class="button" id="add_to_cart"><a href="{{route('cart')}}">Add to cart</a></button>
                 </div>
                 
                 <div style="display:inline-block;">
@@ -21,19 +28,20 @@
     <div  style="display:inline-block; padding:10px;">
 
         <div>
-            <h1><u>Cadbury Dairy Milk Silk</u></h1>
+        <h1><u>{{$name}}</u></h1>
+            
             <br><br>
 
             <div>
                 <h3 style="display:inline-block">Category:</h3>
-                <h3 style="display:inline-block; font-weight:bold">Bestfriend</h3>
-                <img style="display:inline-block" src="img/heart.png" width="30px" height="30px">
+            <h3 style="display:inline-block; font-weight:bold">{{$category}}</h3>
+                <!--<img style="display:inline-block" src="img/heart.png" width="30px" height="30px">-->
             </div>
             <br><br>
 
             <div>
                 <h3 style="display:inline-block">Price:</h3>
-                <h3 style="display:inline-block; font-weight:bold">Rs 70</h3>
+            <h3 style="display:inline-block; font-weight:bold">{{$price}}</h3>
         </div>
 
 

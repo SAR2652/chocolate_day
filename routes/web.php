@@ -11,13 +11,11 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('pages.welcome');
-});
-*/
 
 Route::get('/', 'PagesController@welcome');
-Route::get('/purchasing','ChocolateController@index');
+Route::get('/purchasing/{c_id}', [
+    'as' => 'purchasing', 'uses' => 'ChocolateController@index'
+]);
 
 Auth::routes();
 
@@ -25,5 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback');
-Route::get('cart','PagesController@cart');
-//Route::get('choc_view','ChocolateController@index');
+//Route::get('/cart','PagesController@cart');
+Route::get('/cart', [
+    'as' => 'cart', 'uses' => 'PagesController@cart'
+]);

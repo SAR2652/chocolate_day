@@ -60,7 +60,7 @@
 		            setTimeout(showSlides, 4000);
 				}
 			</script>
-			<div class="container1" style="margin-left: 50px;">
+			<div class="container1" style="margin-left: 50px;" id="chocolates">
 			<div class="choc"><a href="{{route('purchasing', ['c_id' => '1'])}}">
 				<img src="img/silk_oreo(1).jpg" style="height: 250px;">
 				<div class="label">

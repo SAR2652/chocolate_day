@@ -137,7 +137,7 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Chocolates</a></li>
+						<li><a href="#chocolates">Chocolates</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>

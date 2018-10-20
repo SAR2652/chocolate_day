@@ -38,3 +38,5 @@ Route::get('/thank_you', [
 Route::get('/welcome', [
     'as' => 'welcome', 'uses' => 'PagesController@welcome'
 ]);
+
+Route::get('send','MailController@send');

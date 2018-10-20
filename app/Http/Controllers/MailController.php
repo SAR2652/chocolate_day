@@ -9,34 +9,16 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class MailController extends Controller {
-   public function basic_email(){
-      $data = array('name'=>"JAY RAJPUT");
-   
-      Mail::send(['text'=>'pages.mail'], $data, function($message) {
-         $message->to('2016.jay.rajput@ves.ac.in', 'JAY RAJPUT')->subject
-            ('Laravel Basic Testing Mail');
-         $message->from('2016.jay.rajput@ves.ac.in','JAY RAJPUT');
-      });
-      echo "Basic Email Sent. Check your inbox.";
-   }
-   public function html_email(){
-      $data = array('name'=>"JAY RAJPUT");
-      Mail::send('mail', $data, function($message) {
-         $message->to('2016.jay.rajput@ves.ac.in', 'JAY RAJPUT')->subject
-            ('Laravel HTML Testing Mail');
-         $message->from('2016.jay.rajput@ves.ac.in','JAY RAJPUT');
-      });
-      echo "HTML Email Sent. Check your inbox.";
-   }
-   public function attachment_email(){
-      $data = array('name'=>"JAY RAJPUT");
-      Mail::send('mail', $data, function($message) {
-         $message->to('2016.jay.rajput@ves.ac.in', 'JAY RAJPUT')->subject
-            ('Laravel Testing Mail with Attachment');
-         $message->attach('C:\laravel-master\laravel\public\uploads\image.png');
-         $message->attach('C:\laravel-master\laravel\public\uploads\test.txt');
-         $message->from('2016.jay.rajput@ves.ac.in','JAY RAJPUT');
-      });
-      echo "Email Sent with attachment. Check your inbox.";
-   }
+    public function send(){
+        $users=DB::select('select * from sender_receiver');
+        foreach ($users as $user) {
+            # code...
+            $choco=DB::select('select * from chocolates where id='.$user->choco_id);
+            Mail::raw($user->message,function($message) use($user,$choco){
+                $message->to($user->receiver,'To JAY RAJPUT')->subject('Chocolate as '.$choco[0]->category);
+                $message->from($user->sender,'JAY RAJPUT');
+            });
+        }
+        //return view('pages.mail',['users'=>$users]);
+    }
 }

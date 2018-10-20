@@ -64,7 +64,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="#" class="logo">
-									<img src="img/download.png" alt="ves logo">
+								<img src="{{asset('img/ves_logo.png')}}" alt="ves logo">
 								</a>
 							</div>
 						</div>

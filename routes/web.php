@@ -24,6 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('auth/google', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/google/callback', 'Auth\RegisterController@handleProviderCallback');
 //Route::get('/cart','PagesController@cart');
-Route::get('/cart', [
+Route::get('/cart/{c_id}', [
     'as' => 'cart', 'uses' => 'PagesController@cart'
 ]);

@@ -1,64 +1,47 @@
 @extends('layouts.theme')
 @section('content')
 <link href="css/welcome.css" rel="stylesheet">
+<style>
+.mySlides {display:none;}
+</style>
 <h1 class="breadcrumb-header">Welcome to Chocolate Day at VESIT</h1>
 <div class="slideshow-container">
-					  <div class="mySlides fade">
-					    <div class="numbertext">1 / 3</div>
-					    <img src="img/home1.jpg" style="width:1200px; height: 350px;">
-					  </div>
-
-					  <div class="mySlides fade">
-					    <div class="numbertext">2 / 3</div>
-					    <img src="img/home1.jpg" style="width:1200px; height: 350px;">
-					  </div>
-
-					  <div class="mySlides fade">
-					    <div class="numbertext">3 / 3</div>
-					    <img src="img/home1.jpg" style="width:1200px; height: 350px;">
-					  </div>
-					    
-  							<a class="prev" onclick="plusSlides(-1)"><img src="img/arrow-left.png"></a>
-  							<a class="next" onclick="plusSlides(1)"><img src="img/arrow-right.png" style="float: right;"></a>
-			</div>
-			<br>	
-
-
+ 						<img class="mySlides" src="img/home2.jpg" style="width:1200px; height:350px;">
+  						<img class="mySlides" src="img/home1.jpg" style="width:1200px; height:350px;">
+  						<img class="mySlides" src="img/home3.jpg" style="width:1200px; height:350px;">
+  			
+  							<a class="prev" onclick="plusDivs(-1)"><img src="img/arrow-left.png"></a>
+  							<a class="next" onclick="plusDivs(1)"><img src="img/arrow-right.png" style="float: right;"></a>
+							  <!--<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  								<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
+</div>
+<br>	
 
 			<div style="text-align:center">
-					  <span class="dot" onclick="currentSlide(1)"></span> 
-					  <span class="dot" onclick="currentSlide(2)"></span> 
-					  <span class="dot" onclick="currentSlide(3)"></span> 
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
 			</div>
 
-			<script type="text/javascript">
-				var slideIndex = 0;
-        		showSlides();
+			<script>
+				var slideIndex = 1;
+        		showDivs(slideIndex);
 
-		        function plusSlides(n) {
-		          showSlides(slideIndex += n);
-		        }
-
-		        function currentSlide(n) {
-		          showSlides(slideIndex = n);
-		        }
-
-		        function showSlides() {
-		            var i;
-		            var slides = document.getElementsByClassName("mySlides");
-		            var dots = document.getElementsByClassName("dot");
-		            for (i = 0; i < slides.length; i++) {
-		               slides[i].style.display = "none";  
-		            }
-		            slideIndex++;
-		            if (slideIndex > slides.length) {slideIndex = 1}    
-		            for (i = 0; i < dots.length; i++) {
-		                dots[i].className = dots[i].className.replace(" active", "");
-		            }
-		            slides[slideIndex-1].style.display = "block";  
-		            dots[slideIndex-1].className += " active";
-		            setTimeout(showSlides, 4000);
+				function plusDivs(n) {
+				showDivs(slideIndex += n);
 				}
+
+				function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				
+				x[slideIndex-1].style.display = "block"; 
+			}
 			</script>
 			<div class="container1" style="margin-left: 50px;" id="chocolates">
 			<div class="choc"><a href="{{route('purchasing', ['c_id' => '1'])}}">

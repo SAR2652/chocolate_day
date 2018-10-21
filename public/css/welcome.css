@@ -16,16 +16,14 @@
     margin-left: 38.5%;
     text-align: center;
 }
-.choc label{
-        margin: auto;
-}
+
 .label{
     margin-top: 60px;
     font-size: 25px;
     font-family: sans-serif;
     color: #990022;
     align-items: center;
-    margin: auto;
+    
 }
 * {
     box-sizing:border-box

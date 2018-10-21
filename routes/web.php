@@ -40,3 +40,6 @@ Route::get('/welcome', [
 ]);
 
 Route::get('send','MailController@send');
+
+Route::post('/insertcart',[
+    'as' =>'insertcart','uses'=>'PagesController@insertcart']);

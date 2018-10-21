@@ -153,7 +153,8 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', 'vesitchocolateday.com'),
+    //'domain' => env('SESSION_DOMAIN', 'vesitchocolateday.com'),
+    'domain' => env('SESSION_DOMAIN', null),
 
     /*
     |--------------------------------------------------------------------------

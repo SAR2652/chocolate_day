@@ -2,7 +2,8 @@
 @section('content')
 <link rel="stylesheet" href="{{URL::asset('css/purchasing_page.css')}}">
 <div>
-<form action="{{asset('getmessage.php')}}" method="POST">
+<form action="/insertcart" method="POST">
+    @csrf
     <div style="display:inline-block;vertical-align:top;">
         @foreach ($chocos as $item)
         @if ($c_id==$item->id)

@@ -2,8 +2,8 @@
 $email_receiver=$_POST['email'];
 $message=$_POST['message'];
 require('db.php');
-$sql = "INSERT INTO sender_receiver
-		VALUES('Ritika','$email_receiver',1,'$message','D12B')";
+$sql = "INSERT INTO sender_receiver(sender,receiver,choco_id,message,class,bought)
+		VALUES('Ritika','$email_receiver',1,'$message','D12B',0)";
 if ($conn->query($sql) === TRUE) {
    // echo "Values Added ";
 } else {
@@ -190,7 +190,7 @@ if ($conn->query($sql) === TRUE) {
 									</div>
 								</div>
 							</td>
-							<td data-th="Price">Rs.70</td>
+							<td data-th="Price"><?php $chocos['0']->price ?></td>
 							<td data-th="Quantity">
 								<input type="number" class="form-control text-center" value="1">
 							</td>

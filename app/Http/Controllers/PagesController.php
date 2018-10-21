@@ -25,4 +25,13 @@ class PagesController extends Controller
     public function thank_you(){
         return view('pages.thank_you');
     }
+
+    function insertcart(Request $req){
+        $email=$req->input('email');
+        $message=$req->input('message');
+        $data=array('sender'=>'2016.jay.rajput@ves.ac.in','receiver'=>$email,'choco_id'=>'1',
+        'message'=>$message,'class'=>'D12B','bought'=>0);
+        DB::table('sender_receiver')->insert($data);
+        return view('pages.insertcart');
+    }
 }

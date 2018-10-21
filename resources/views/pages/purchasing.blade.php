@@ -2,7 +2,7 @@
 @section('content')
 <link rel="stylesheet" href="{{URL::asset('css/purchasing_page.css')}}">
 <div>
-<form action="/insertcart" method="POST">
+<form action="{{route('insertcart',['c_id'=>$c_id])}}" method="POST">
     @csrf
     <div style="display:inline-block;vertical-align:top;">
         @foreach ($chocos as $item)

@@ -26,12 +26,14 @@ class PagesController extends Controller
         return view('pages.thank_you');
     }
 
-    function insertcart(Request $req){
+    function insertcart(Request $req,$c_id){
         $email=$req->input('email');
         $message=$req->input('message');
-        $data=array('sender'=>'2016.jay.rajput@ves.ac.in','receiver'=>$email,'choco_id'=>'1',
+        $data=array('sender'=>'2016.jay.rajput@ves.ac.in','receiver'=>$email,'choco_id'=>$c_id,
         'message'=>$message,'class'=>'D12B','bought'=>0);
         DB::table('sender_receiver')->insert($data);
-        return view('pages.insertcart');
+
+        $chocos = DB::select('SELECT * FROM chocolates,sender_receiver WHERE chocolates.id=sender_receiver.choco_id');
+        return view('pages.insertcart',['chocos'=>$chocos]);
     }
 }

@@ -41,5 +41,5 @@ Route::get('/welcome', [
 
 Route::get('send','MailController@send');
 
-Route::post('/insertcart',[
+Route::post('/insertcart/{c_id}',[
     'as' =>'insertcart','uses'=>'PagesController@insertcart']);

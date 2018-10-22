@@ -44,7 +44,7 @@
 					
 					<ul class="header-links pull-right">
 						<li><a href="/auth/google"><i class="fa fa-user-o"></i>
-						<?php if(!empty($email))
+						<?php if(session('email'))
 						{
 							echo session('email');
 						}
@@ -136,7 +136,7 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Home</a></li>
 						<li><a href="#chocolates">Chocolates</a></li>
 					</ul>
 					<!-- /NAV -->

@@ -87,7 +87,7 @@ class RegisterController extends Controller
     {
         try
         {
-            $socialUser = Socialite::driver('google')->stateless()->user();
+            $socialUser = Socialite::driver('google')->user();
         }
         catch(\Exception $e)
         {
@@ -114,7 +114,6 @@ class RegisterController extends Controller
         auth()->login($user);
         $email = $socialUser->getEmail();
         session(['email' => $email]);
-        header("Cache-Control", "no-cache, no-store, must-revalidate");
         // $user->token;
         return redirect('/');
     } 

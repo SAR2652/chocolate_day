@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
     public function welcome()
     {
-        return view('pages.welcome');
+        return view('pages.index');
     }
 
     /*public function purchasing(){
@@ -29,7 +29,7 @@ class PagesController extends Controller
     function insertcart(Request $req,$c_id){
         $email=$req->input('email');
         $message=$req->input('message');
-        $data=array('sender'=>'2016.jay.rajput@ves.ac.in','receiver'=>$email,'choco_id'=>$c_id,
+        $data=array('sender'=>session('email'),'receiver'=>$email,'choco_id'=>$c_id,
         'message'=>$message,'class'=>'D12B','bought'=>0);
         DB::table('sender_receiver')->insert($data);
 
